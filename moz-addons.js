@@ -5,7 +5,7 @@ const ReadLine = require("readline")
 main().catch(error)
 
 function formatOutput(item) {
-    console.log(item.name)
+    console.log(" - " + item.name)
     console.log("Type: " + item.type)
     console.log("ID: " + item.id)
     console.log("Version: " + item.version)
