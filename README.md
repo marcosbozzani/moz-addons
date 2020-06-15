@@ -11,7 +11,9 @@ List installed add-ons for a Thunderbird or Firefox profile
 ## Usage
 
 1. Download [moz-addons.js](moz-addons.js)
-2. Run `node moz-addons` or `node moz-addons {profile}`
+2. Run `node moz-addons {program} {profile}`:
+   - `{program}`: `thunderbird` or `firefox` (optional)
+   - `{profile}`: `xxxxxxxx.default` (optional)
 
 ## Custom output
 
@@ -20,10 +22,12 @@ List installed add-ons for a Thunderbird or Firefox profile
 
 ```javascript
 function formatOutput(item) {
-    console.log(item.name, item.id, item.version)
+    console.log(item.name,  )
+    console.log("Type: " + item.type)
+    console.log("ID: " + item.id)
+    console.log("Version: " + item.version)
     console.log("Home Page: " + item.homepageURL)
     console.log("Source: " + item.sourceURI)
-    console.log("Type: " + item.type)
     console.log()
 }
 ```
